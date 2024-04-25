@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>View</class>
+ <widget class="QMainWindow" name="View">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1900</width>
+    <height>1010</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>View</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1f1f1f;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="s21::Render" name="Render" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-290</y>
+      <width>1590</width>
+      <height>1590</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ObjectName">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>5</y>
+      <width>290</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-style: solid;
+border-width: 1px;
+border-color: #464646;
+border-radius: 5%;
+padding: 2;
+}</string>
+    </property>
+    <property name="text">
+     <string>Choose .obj file</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OpenFile">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>45</y>
+      <width>290</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>Open file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TranslateX">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>405</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>X Axis</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>160</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RotateZ">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>305</y>
+      <width>77</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Z Axis</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TranslateZ">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>485</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Z Axis</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TranslateY">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>445</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Y Axis</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RotateX">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>225</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>X Axis</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RotateY">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>265</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Y Axis</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vertices">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>85</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Vertices</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Edges">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>125</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Edges</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rotate">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>185</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+text-align: center;
+}</string>
+    </property>
+    <property name="text">
+     <string>Rotate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Translate">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>365</y>
+      <width>91</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+text-align: center;
+}</string>
+    </property>
+    <property name="text">
+     <string>Translate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Scale">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>545</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Scale</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BackgroundColor">
+    <property name="geometry">
+     <rect>
+      <x>1760</x>
+      <y>605</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>Set Color</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Background">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>605</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Background</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="ParallelProjection">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>645</y>
+      <width>140</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Parallel </string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">projectionRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="CentralProjection">
+    <property name="geometry">
+     <rect>
+      <x>1749</x>
+      <y>645</y>
+      <width>140</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Central</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">projectionRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="QDoubleSpinBox" name="VerticesWidthValue">
+    <property name="geometry">
+     <rect>
+      <x>1760</x>
+      <y>740</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-style: solid;
+border-width: 1px;
+border-color: #464646;
+border-radius: 5%;
+padding: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="VerticesTypeNone">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>780</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>None</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">vertexTypeRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>810</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="VerticesTypeSquare">
+    <property name="geometry">
+     <rect>
+      <x>1796</x>
+      <y>780</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Square</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">vertexTypeRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="VerticesTypeCircle">
+    <property name="geometry">
+     <rect>
+      <x>1697</x>
+      <y>780</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Circle</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">vertexTypeRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="MakeRecord">
+    <property name="geometry">
+     <rect>
+      <x>1747</x>
+      <y>970</y>
+      <width>144</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>Record</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EdgesWidth">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>875</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Edges width</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>945</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="EdgesTypeSolid">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>915</y>
+      <width>140</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Solid</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">edgesTypeRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="EdgesTypeDashed">
+    <property name="geometry">
+     <rect>
+      <x>1744</x>
+      <y>915</y>
+      <width>140</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+padding-left: 5px;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}
+
+QRadioButton:hover {
+border-style: solid;
+border-width: 2px;
+border-color: #b5adeb;
+border-radius: 5%;
+margin: 2;}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QRadioButton::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QRadioButton::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #b5adeb;;
+border-radius: 9px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Dashed</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">edgesTypeRButtons</string>
+    </attribute>
+   </widget>
+   <widget class="QDoubleSpinBox" name="EdgesWidthValue">
+    <property name="geometry">
+     <rect>
+      <x>1759</x>
+      <y>875</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-style: solid;
+border-width: 1px;
+border-color: #464646;
+border-radius: 5%;
+padding: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MakeScreenshot">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>970</y>
+      <width>144</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>Screenshot</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vertices_2">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>700</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Vertices</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VerticesWidth">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>740</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Vertices width</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Edges_2">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>835</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Edges</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>675</y>
+      <width>291</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="VerticesColor">
+    <property name="geometry">
+     <rect>
+      <x>1760</x>
+      <y>700</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>Set Color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EdgesColor">
+    <property name="geometry">
+     <rect>
+      <x>1760</x>
+      <y>835</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>Set Color</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VerticesCount">
+    <property name="geometry">
+     <rect>
+      <x>1700</x>
+      <y>83</y>
+      <width>190</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 2;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EdgesCount">
+    <property name="geometry">
+     <rect>
+      <x>1700</x>
+      <y>125</y>
+      <width>190</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 2;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ScaleDown">
+    <property name="geometry">
+     <rect>
+      <x>1700</x>
+      <y>545</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 16pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ScaleUp">
+    <property name="geometry">
+     <rect>
+      <x>1801</x>
+      <y>545</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>340</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>520</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_8">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>580</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TranslateXLeft">
+    <property name="geometry">
+     <rect>
+      <x>1699</x>
+      <y>405</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TranslateXRight">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>405</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TranslateYLeft">
+    <property name="geometry">
+     <rect>
+      <x>1699</x>
+      <y>445</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TranslateYRight">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>445</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TranslateZLeft">
+    <property name="geometry">
+     <rect>
+      <x>1699</x>
+      <y>485</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TranslateZRight">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>485</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RotateZLeft">
+    <property name="geometry">
+     <rect>
+      <x>1699</x>
+      <y>305</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RotateZRight">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>305</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RotateYRight">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>265</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RotateXLeft">
+    <property name="geometry">
+     <rect>
+      <x>1699</x>
+      <y>225</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RotateYLeft">
+    <property name="geometry">
+     <rect>
+      <x>1699</x>
+      <y>265</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RotateXRight">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>225</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+padding: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RotationAngle">
+    <property name="geometry">
+     <rect>
+      <x>1715</x>
+      <y>185</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 2;
+}</string>
+    </property>
+    <property name="text">
+     <string>Angle</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TranslateStep">
+    <property name="geometry">
+     <rect>
+      <x>1715</x>
+      <y>365</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 2;
+}</string>
+    </property>
+    <property name="text">
+     <string>Step</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="RotationAngleValue">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>185</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-style: solid;
+border-width: 1px;
+border-color: #464646;
+border-radius: 5%;
+padding: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="minimum">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="TranslateStepValue">
+    <property name="geometry">
+     <rect>
+      <x>1800</x>
+      <y>365</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-style: solid;
+border-width: 1px;
+border-color: #464646;
+border-radius: 5%;
+padding: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="minimum">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>1690</x>
+      <y>185</y>
+      <width>20</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_9">
+    <property name="geometry">
+     <rect>
+      <x>1690</x>
+      <y>365</y>
+      <width>20</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line{color: #464646;}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>s21::Render</class>
+   <extends>QWidget</extends>
+   <header>render.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="projectionRButtons"/>
+  <buttongroup name="vertexTypeRButtons"/>
+  <buttongroup name="edgesTypeRButtons"/>
+ </buttongroups>
+</ui>
